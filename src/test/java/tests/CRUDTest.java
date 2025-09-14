@@ -22,8 +22,10 @@ public class CRUDTest  extends BaseTest
             , String additionalNeeds, String checkin, String checkout)
     {
 
-        String username = PropertyUtil.getConfig().username();
-        String password = PropertyUtil.getConfig().password();
+
+
+        String username = System.getenv("RESTFULBOOKER_USERNAME");
+        String password = System.getenv("RESTFULBOOKER_PASSWORD");
 
         var createBookingApi = new CreateBookingApi();
         var getBookingApi = new GetBookingApi();

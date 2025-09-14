@@ -30,6 +30,10 @@ public class DeleteApiTest
     @Test
     public void deleteExistingBooking()
     {
+
+        String username = System.getenv("RESTFULBOOKER_USERNAME");
+        String password = System.getenv("RESTFULBOOKER_PASSWORD");
+
         var createBookingPayload = ApiRequestHelper.getCreateBookingPayloadPojo("Lion","Honey",
                 1230,"Balcony",true,"2025-09-13","2025-09-15");
 
@@ -48,7 +52,7 @@ public class DeleteApiTest
         //Deleting the Booking
 
        this.deleteBookingApi.
-                deleteBookingById(bookingId,"admin","password123")
+                deleteBookingById(bookingId,username,password)
                 .then().assertThat().statusCode(201);
 
       this.getBookingApi.getBookingById(bookingId).then().assertThat().statusCode(404);

@@ -34,8 +34,8 @@ public class UpdateBookingApiTest {
         var bookingId = createBookingResponse.extract().jsonPath().getInt("bookingid");
         System.out.println("The booking id is " + bookingId);
 
-        String username = PropertyUtil.getConfig().username();
-        String password = PropertyUtil.getConfig().password();
+        String username = System.getenv("RESTFULBOOKER_USERNAME");
+        String password = System.getenv("RESTFULBOOKER_PASSWORD");
 
         System.out.println(username);
         System.out.println(password);
