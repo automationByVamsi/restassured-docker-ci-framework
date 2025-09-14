@@ -24,7 +24,7 @@ public class GetBookingApiTests
     {
         var getBookingApi = new GetBookingApi();
         getBookingApi.getBookingById(25).
-                then().assertThat().statusCode(201);
+                then().assertThat().statusCode(200);
     }
 
 }

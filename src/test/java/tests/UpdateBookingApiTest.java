@@ -45,7 +45,7 @@ public class UpdateBookingApiTest {
         createBookingRequest.replace("lastname", "Welons");
 
 
-        var updateBookingResponse = this.updateBookingApi.
+        this.updateBookingApi.
                 updateBooking(username, password, createBookingRequest, bookingId).then()
                 .and().assertThat().statusCode(200);
 
