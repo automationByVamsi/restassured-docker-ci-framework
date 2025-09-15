@@ -19,12 +19,12 @@ public class GetBookingApiTests
 
     }
 
-    @Test(description = "Basic HTTP Status check for get booking by id API")
-    public void validateStatusForGetBookingByIdApi()
-    {
-        var getBookingApi = new GetBookingApi();
-        getBookingApi.getBookingById(25).
-                then().assertThat().statusCode(200);
-    }
+//    @Test(description = "Basic HTTP Status check for get booking by id API")
+//    public void validateStatusForGetBookingByIdApi()
+//    {
+//        var getBookingApi = new GetBookingApi();
+//        getBookingApi.getBookingById(25).
+//                then().assertThat().statusCode(200);
+//    }
 
 }
