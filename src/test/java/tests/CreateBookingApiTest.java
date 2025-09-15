@@ -3,17 +3,14 @@ package tests;
 import apis.CreateBookingApi;
 import apis.DeleteBookingApi;
 import org.hamcrest.Matchers;
-import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import pojo.response.CreateBookingResponse;
 import utils.ApiRequestHelper;
 import utils.TestDataHelper;
 import java.time.format.DateTimeFormatter;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.stream.IntStream;
 
-public class CreateBookingApiTest {
+
+public class CreateBookingApiTest extends BaseTest {
 
 
     @Test(description = "Create a new booking and validate the status code")
