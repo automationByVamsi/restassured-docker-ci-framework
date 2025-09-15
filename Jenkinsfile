@@ -20,7 +20,7 @@ pipeline {
                     catchError(buildResult:'UNSTABLE',stageResult:'FAILURE'){
                         withCredentials([userNamePassword(
                                 credentialsId: 'REST_BOOKER_CREDS',
-                                userNameVariable: 'RESTFULBOOKER_USERNAME',
+                                usernameVariable: 'RESTFULBOOKER_USERNAME',
                                 passwordVariable: 'RESTFULBOOKER_PASSWORD'
                         )]) {
                             sh "mvn test -Pregression"
