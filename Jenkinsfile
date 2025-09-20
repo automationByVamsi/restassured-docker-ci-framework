@@ -18,7 +18,7 @@ pipeline {
 
                 script{
                     catchError(buildResult:'UNSTABLE',stageResult:'FAILURE'){
-                        withCredentials([userNamePassword(
+                        withCredentials([usernamePassword(
                                 credentialsId: 'REST_BOOKER_CREDS',
                                 usernameVariable: 'RESTFULBOOKER_USERNAME',
                                 passwordVariable: 'RESTFULBOOKER_PASSWORD'
